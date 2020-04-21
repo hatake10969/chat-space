@@ -34,3 +34,8 @@ Things you may want to cover:
 ## Association
 - has_many :groups, through: :groups_users
 - has_many :messages
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, add_index: true|
