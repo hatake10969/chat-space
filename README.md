@@ -43,3 +43,9 @@ Things you may want to cover:
 ## Association
 - has_many :users, through: :groups_users
 - has_many :messages
+
+## groups_userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
