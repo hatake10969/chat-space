@@ -53,3 +53,11 @@ Things you may want to cover:
 ## Association
 - belongs_to :user
 - belongs_to :group
+
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
