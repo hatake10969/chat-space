@@ -1,0 +1,33 @@
+.side-bar
+  /*ユーザー名・アイコンを表示*/
+  .side-bar__user-name 
+    .box
+      %p.name 名前
+      .logo
+        = link_to "#", class: "new-group-btn" do
+          = icon('far', 'edit')
+        = link_to "#", class: "edit-user-btn" do
+          = icon('fas', 'cog')
+
+  /*グループ名と最新メッセージをリストで表示*/
+  .side-bar__group-list
+    .group-box
+      .groups
+        = link_to "#", class: "link" do
+          .group
+            %p.group__name techcamp
+            %p.group__message まだメッセージがありません
+        
+      .groups
+        = link_to "#", class: "link" do
+          .group
+            %p.group__name techcamp
+            %p.group__message まだメッセージがありません
+
+      .groups
+        = link_to "#", class: "link" do
+          .group
+            %p.group__name techcamp
+            %p.group__message まだメッセージがありません
+
+       
