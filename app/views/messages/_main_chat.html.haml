@@ -2,38 +2,25 @@
   /*グループ名とメンバー、Editボタンを表示*/
   .main-chat__group-info
     .infomation
-      .group-name グループ名
-      .member メンバー名
+      .group-name
+        = @group.name
+      .member
+        - @group.users.each do |user|
+          = user.name
       .edit-group
-        = link_to "#", class: "edit-group__btn" do
+        = link_to edit_group_path(@group), class: "edit-group__btn" do
           Edit
 
   /*メッセージの一覧を表示*/
   .main-chat__message-list
-    .message
-      .message__info
-        .message__info__name 名前
-        .message__info__time 日時
-      .message__text テキスト
-
-    .message
-      .message__info
-        .message__info__name 名前
-        .message__info__time 日時
-      .message__text テキスト
-
-    .message
-      .message__info
-        .message__info__name 名前
-        .message__info__time 日時
-      .message__text テキスト
+    = render @messages
 
   /*メッセージフォームを表示*/
   .main-chat__message-form
-    %form.new-message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "Send"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
