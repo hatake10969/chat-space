@@ -4,7 +4,7 @@
     .box
       = current_user.name
       .logo
-        = link_to "#", class: "new-group-btn" do
+        = link_to new_group_path, class: "new-group-btn" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "edit-user-btn" do
           = icon('fas', 'cog')
@@ -12,20 +12,11 @@
   /*グループ名と最新メッセージをリストで表示*/
   .side-bar__group-list
     .group-box
-      .groups
-        = link_to "#", class: "link" do
-          .group
-            %p.group__name techcamp
-            %p.group__message まだメッセージがありません
-
-      .groups
-        = link_to "#", class: "link" do
-          .group
-            %p.group__name techcamp
-            %p.group__message まだメッセージがありません
-
-      .groups
-        = link_to "#", class: "link" do
-          .group
-            %p.group__name techcamp
-            %p.group__message まだメッセージがありません
+      - current_user.groups.each do |group|
+        .groups
+          = link_to messages_path, class: "link" do
+            .group
+              %p.group__name
+                = group.name
+              %p.group__message
+                メッセージはまだありません。

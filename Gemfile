@@ -60,3 +60,6 @@ gem 'font-awesome-sass'
 
 # deviseを導入
 gem 'devise'
+
+# pryを導入
+gem 'pry-rails'
