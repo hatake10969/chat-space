@@ -16,4 +16,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# 投稿された内容はGitHubでは管理しない
 public/uploads/*
