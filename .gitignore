@@ -19,4 +19,5 @@
 # 投稿された内容はGitHubでは管理しない
 public/uploads/*
 
-.DS_Store
+public/.DS_Store
+public/images/test_image.jpg
