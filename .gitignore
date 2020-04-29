@@ -18,3 +18,5 @@
 
 # 投稿された内容はGitHubでは管理しない
 public/uploads/*
+
+.DS_Store
