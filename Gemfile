@@ -41,10 +41,17 @@ group :development, :test do
   gem 'byebug', platform: :mri
 
   # rspec-railsを導入
-gem 'rspec-rails'
-gem 'rails-controller-testing'
-gem 'factory_bot_rails'
-gem 'faker', "~> 2.8"
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+
+  gem 'faker', "~> 2.8"
+
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
