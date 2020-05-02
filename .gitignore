@@ -21,3 +21,5 @@ public/uploads/*
 
 public/.DS_Store
 public/images/test_image.jpg
+
+config/secrets.yml
