@@ -23,3 +23,6 @@ public/.DS_Store
 public/images/test_image.jpg
 
 config/secrets.yml
+
+# .DS_Storeを除外
+.DS_Store
